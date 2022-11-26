@@ -1,1 +1,1 @@
-<h1>Google search !</h1>
+<h1>Google search</h1>
