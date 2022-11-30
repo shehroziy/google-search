@@ -1,11 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import reducer, { initialState } from "./GoogleClone/homeComponents/reducer";
+import { StateProvider } from "./GoogleClone/homeComponents/StateProvider";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <StateProvider initialState={initialState} reducer={reducer}>
+        <App />
+    </StateProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
